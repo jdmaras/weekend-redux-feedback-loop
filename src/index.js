@@ -8,6 +8,8 @@ import logger from "redux-logger";
 
 import registerServiceWorker from './registerServiceWorker';
 
+
+//Get to grab from database for the admin page
 const dataBaseInfo = (state = [], action) => {
     switch (action.type) {
         case "GRAB_DB":

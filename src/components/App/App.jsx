@@ -6,6 +6,8 @@ import { useEffect } from 'react';
 "react-router-dom";
 import { useDispatch } from 'react-redux';
 
+
+
 //component import
 import Header from '../Header/Header';
 import Comments from '../Comments/Comments';
@@ -25,7 +27,7 @@ function App() {
   const grabDatabase = () => {
     axios({
       method: 'GET',
-      url: '/prime_feedback'
+      url: '/feedback'
     })
     .then((response) => {
       dispatch({
@@ -40,8 +42,8 @@ function App() {
 
   return (
     <div className='App'>
-      <Header />
       <Router>
+      <Header />
         <Route path="/" exact>
           <Feeling />
         </Route>
