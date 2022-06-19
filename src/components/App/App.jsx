@@ -21,22 +21,6 @@ function App() {
   }, [])
   const dispatch = useDispatch(); 
 
-  //setting default states for all of the values sent to the reducer
-  const feedBackReducer = (state = {
-    feeling: 0,
-    understanding: 0,
-    support: 0,
-    comments: 'Yolo'
-  }, action) => {
-    switch (action.type) {
-      case "USER_FEELING":
-      case "USER_SUPPORT":
-      case "USER_UNDERSTANDING":
-      case "USER_COMMENTS":
-        return action.payload;
-    }
-    return state;
-  }
   const grabDatabase = () => {
     axios({
       method: 'GET',
