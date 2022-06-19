@@ -4,9 +4,11 @@ import { useDispatch } from 'react-redux';
 
 function Feeling(){
 
+  //setting the options for rating input
   const optionValues = [1,2,3,4,5]
   const dispatch = useDispatch();
   const history = useHistory();
+  //capturing state and starting it at zero
   const [feeling, setFeeling] = useState(0)
 
   const handleSubmit = () => {
@@ -16,8 +18,8 @@ function Feeling(){
       type: 'USER_FEELING',
       payload: Number(feeling)
     })
-    //CHANGE THIS BACK TO /understanding -----------
-    history.push('/review')
+    //route over to the Understanding component/page
+    history.push('/understanding')
   }
     return(
        <div>
