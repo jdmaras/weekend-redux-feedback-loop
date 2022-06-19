@@ -34,6 +34,9 @@ const dataBaseInfo = (state = [], action) => {
         return {...state, support: action.payload}
       case "USER_COMMENTS":
         return {...state, comments: action.payload}
+      case "RESET_FEEDBACK":
+        return {}
+      //just give the review page a type and not a payload
     }
     return state;
   }
