@@ -16,7 +16,8 @@ function Feeling(){
       type: 'USER_FEELING',
       payload: Number(feeling)
     })
-    history.push('/understanding')
+    //CHANGE THIS BACK TO /understanding -----------
+    history.push('/review')
   }
     return(
        <div>

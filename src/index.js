@@ -29,9 +29,11 @@ const dataBaseInfo = (state = [], action) => {
       case "USER_FEELING":
         return {...state, feeling: action.payload}
       case "USER_SUPPORT":
+        return {...state, understanding: action.payload}
       case "USER_UNDERSTANDING":
+        return {...state, support: action.payload}
       case "USER_COMMENTS":
-        return action.payload;
+        return {...state, comments: action.payload}
     }
     return state;
   }
