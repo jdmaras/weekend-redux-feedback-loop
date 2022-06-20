@@ -12,6 +12,8 @@ import Comments from '../Comments/Comments';
 import Feeling from '../Feeling/Feeling';
 import Support from '../Support/Support';
 import Understanding from '../Understanding/Understand';
+import Review from '../Review/Review';
+import ThankYou from '../ThankYou/ThankYou';
 
 function App() {
 
@@ -20,7 +22,6 @@ function App() {
     grabDatabase();
   }, [])
   const dispatch = useDispatch(); 
-
 
   const grabDatabase = () => {
     axios({
@@ -54,6 +55,12 @@ function App() {
         </Route>
         <Route path="/comments" exact>
           <Comments />
+        </Route>
+        <Route path="/review" exact>
+          <Review />
+        </Route>
+        <Route path="/thankyou" exact>
+          <ThankYou />
         </Route>
 
       </Router>

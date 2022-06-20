@@ -18,8 +18,32 @@ const dataBaseInfo = (state = [], action) => {
     return state;
 }
 
+  //setting default states for all of the values sent to the reducer
+  const feedBackReducer = (state = {
+    feeling: 0,
+    understanding: 0,
+    support: 0,
+    comments: 'Yolo'
+  }, action) => {
+    switch (action.type) {
+      case "USER_FEELING":
+        return {...state, feeling: action.payload}
+      case "USER_SUPPORT":
+        return {...state, understanding: action.payload}
+      case "USER_UNDERSTANDING":
+        return {...state, support: action.payload}
+      case "USER_COMMENTS":
+        return {...state, comments: action.payload}
+      case "RESET_FEEDBACK":
+        return {}
+      //just give the review page a type and not a payload
+    }
+    return state;
+  }
+
 const store = createStore(
     combineReducers({
+    feedBackReducer,
     dataBaseInfo
     }),
     applyMiddleware(logger)
