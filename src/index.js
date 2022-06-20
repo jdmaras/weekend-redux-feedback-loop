@@ -28,10 +28,10 @@ const dataBaseInfo = (state = [], action) => {
     switch (action.type) {
       case "USER_FEELING":
         return {...state, feeling: action.payload}
+      case "USER_UNDERSTANDING":
+          return {...state, support: action.payload}
       case "USER_SUPPORT":
         return {...state, understanding: action.payload}
-      case "USER_UNDERSTANDING":
-        return {...state, support: action.payload}
       case "USER_COMMENTS":
         return {...state, comments: action.payload}
       case "RESET_FEEDBACK":

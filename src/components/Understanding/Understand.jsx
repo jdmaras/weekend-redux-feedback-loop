@@ -7,7 +7,7 @@ function Understanding(){
   const optionValues = [1,2,3,4,5]
   const dispatch = useDispatch();
   const history = useHistory();
-  const [understanding, setUnderstanding] = useState(0)
+  const [understanding, setUnderstanding] = useState(1)
 
   const handleSubmit = () => {
     dispatch({

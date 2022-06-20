@@ -7,7 +7,7 @@ function Support(){
   const optionValues = [1,2,3,4,5]
   const dispatch = useDispatch();
   const history = useHistory();
-  const[support, setSupport] = useState(0)
+  const[support, setSupport] = useState(1)
 
   const handleSubmit = () => {
     dispatch({

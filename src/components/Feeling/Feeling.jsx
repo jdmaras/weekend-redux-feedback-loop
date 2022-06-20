@@ -9,7 +9,7 @@ function Feeling(){
   const dispatch = useDispatch();
   const history = useHistory();
   //capturing state and starting it at zero
-  const [feeling, setFeeling] = useState(0)
+  const [feeling, setFeeling] = useState(1)
 
   const handleSubmit = () => {
    //need to dispatch that as a number and not a string to put
